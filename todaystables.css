@@ -37,19 +37,21 @@ table {
 }
 
 /* Header and body tables - fixed width for column alignment */
-.header-table,
+.header-table {
+    border-bottom: none;
+}
+
 .body-table {
-    table-layout: fixed;
-    border-collapse: collapse;
+    border-top: none;
 }
 
 /* Set minimum widths to ensure horizontal scroll works */
 .header-table {
-    min-width: 700px;
+    min-width: 1000px;
 }
 
 .body-table {
-    min-width: 700px;
+    min-width: 1000px;
 }
 
 /* Header */
@@ -59,45 +61,59 @@ thead {
 }
 
 th {
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     font-weight: bold;
-    border: 2px solid black;
+    border: 1px solid black; /* FIXED */
 }
 
-/* Body cells */
 td {
     height: 60px;
-    border: 2px solid black;
+    border: 1px solid black; /* FIXED */
     text-align: center;
-}
-
-/* Column widths - both header and body use same widths */
-.header-table th,
-.body-table td {
-    width: 14%;
 }
 
 .header-table th:nth-child(2),
-.body-table td:nth-child(2) {
-    width: 25%;
-}
-
 .header-table th:nth-child(3),
-.body-table td:nth-child(3) {
-    width: 15%;
-}
-
 .header-table th:nth-child(4),
+.body-table td:nth-child(2),
+.body-table td:nth-child(3),
 .body-table td:nth-child(4) {
-    width: 15%;
+    word-break: break-word;
 }
 
+/* Fixed column widths in px for perfect DB data alignment */
+.header-table th:nth-child(1),
+.body-table td:nth-child(1) { /* USN */
+    width: 100px;
+}
+.header-table th:nth-child(2),
+.body-table td:nth-child(2) { /* First Name */
+    width: 150px;
+}
+.header-table th:nth-child(3),
+.body-table td:nth-child(3) { /* Middle Name */
+    width: 150px;
+}
+.header-table th:nth-child(4),
+.body-table td:nth-child(4) { /* Last Name */
+    width: 150px;
+}
 .header-table th:nth-child(5),
-.body-table td:nth-child(5),
+.body-table td:nth-child(5) { /* Grade & Strand */
+    width: 120px;
+}
 .header-table th:nth-child(6),
-.body-table td:nth-child(6) {
-    width: 11%;
+.body-table td:nth-child(6) { /* Date */
+    width: 120px;
+}
+.header-table th:nth-child(7),
+.body-table td:nth-child(7) { /* IN */
+    width: 100px;
+}
+.header-table th:nth-child(8),
+.body-table td:nth-child(8) { /* OUT */
+    width: 100px;
 }
 
 /* Table scroll wrapper - handles horizontal scroll */
@@ -134,4 +150,3 @@ td {
 .table-scroll-wrapper::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
-

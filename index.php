@@ -20,17 +20,20 @@
         <div class="slide">
             <h1>Menu</h1>
             <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+                <li><a href="index.php"><i class="fas fa-home"></i>Home</a></li>
                 <li class="menu-item-has-children">
                     <a href="#" class="toggle-submenu">
                         <i class="fas fa-table"></i>Tables <i class="fas fa-chevron-right submenu-arrow"></i>
                     </a>
+
+                
                     <ul class="submenu">
-                        <li><a href="tables.html"><i class="fas fa-list"></i>Today's Logins</a></li>
-                        <li><a href="#"><i class="fas fa-th"></i>Recent Tables</a></li>
+                        <li><a href="todaystable.php"><i class="fas fa-list"></i>Today's Logins</a></li>
+                        <li><a href="recent tables.php"><i class="fas fa-th"></i>Recent Tables</a></li>
                     </ul>
                     </li>
-                <li><a href="http://localhost/phpmyadmin/index.php?route=/database/structure&db=logins"><i class="fas fa-cog"></i>Settings</a></li>
+                    
+                <li><a href="http://localhost/phpmyadmin/index.php?route=/sql&pos=0&db=logins&table=students"><i class="fas fa-cog"></i>Settings</a></li>
             </ul>
         </div>
     </nav>
